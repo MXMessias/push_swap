@@ -6,17 +6,36 @@
 #    By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/30 13:17:22 by mmessias          #+#    #+#              #
-#    Updated: 2024/07/30 13:28:42 by mmessias         ###   ########.fr        #
+#    Updated: 2024/08/02 10:43:25 by mmessias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= push_swap
-CC= cc
-CFLAGS= -Wall -Werror -Wextra
+CC= cc -Wall -Werror -Wextra
 SRC= blablabla.c blabla.c bla.c
-OBJS= (SRC: .c=.o)
+OBJS= $(SRC: .c=.o)
+LIBFT= Libft/libft.a
+LIBFT_DIR= libft/
 
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
-	$(CC) $(NAME) $()
+	$(CC) -o $(NAME) $(OBJS) $(LIBFT)
+
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR)
+	
+$(OBJS): $(SRC)
+	$(CC) -c $(SRC)
+
+clean:
+	rm -rf $(OBJS)
+	$(MAKE) -C $(LIBFT_DIR) clean
+
+fclean: clean
+	rm -rf $(NAME)
+	rm -rf $(LIBFT)
+
+re: fclean all
+
+.PHONY: all clean fclean re
