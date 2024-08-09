@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 15:48:23 by mmessias          #+#    #+#             */
-/*   Updated: 2024/05/14 15:59:05 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/08 15:50:30 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
-
 /*int	main(void)
 {
 	char	c;
