@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/09 10:23:23 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/13 08:37:53 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ typedef struct s_stack
 	int		cost;
 	bool	up_median;
 	bool	cheapest;
-	struct s_stack *target_node;
-	struct s_stack *next;
-	struct s_stack *prev;
+	struct s_stack	*target_node;
+	struct s_stack	*next;
+	struct s_stack	*prev;
 }	t_stack;
 
 #endif
