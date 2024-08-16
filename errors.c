@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 13:17:08 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/13 16:03:26 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/16 10:00:58 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	checker(int argc, char **argv, int *len)
 		printerror();
 }
 
-int	numbers( char	**nbrs)
+int	numbers(char **nbrs)
 {
 	int		i;
 	int		j;
@@ -57,7 +57,7 @@ int	numbers( char	**nbrs)
 	return (1);
 }
 
-int	check_args( int **str, int *len)
+int	check_args(char **str, int *len)
 {
 	int	i;
 	int	j;
@@ -72,14 +72,36 @@ int	check_args( int **str, int *len)
 				j++;
 			if (str[i][j])
 			{
-				if (ft_atoi(&str[i][j]) != ft_ato)
-				{
-					/* code *
-				}
-				
+				if (ft_atoi(&str[i][j]) != atol(&str[i][j]))
+					return (0);
+				*len += 1;
 			}
+			if (!valider_nbr(str[i], &j))
+				return (0);
 		}
-		
+		i++;
 	}
-	
+	return (1);
+}
+
+void	duplication(int *nbr, int len)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < len)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (nbr[i] == nbr[j])
+			{
+				free(nbr);
+				printerror();
+			}
+			j++;
+		}
+		i++;
+	}
 }

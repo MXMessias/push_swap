@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/13 08:37:53 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/16 11:31:16 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,24 @@ typedef enum moves
 
 typedef struct s_stack
 {
-	int		input;
-	int		index;
-	int		cost;
-	bool	up_median;
-	bool	cheapest;
+	int				input;
+	int				index;
+	int				cost;
+	bool			up_median;
+	bool			cheapest;
 	struct s_stack	*target_node;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
+
+int		valider_char(char c);
+int		valider_nbr(char *str, int *j);
+long	atol(const char *str);
+
+void	printerror(void);
+void	checker(int argc, char **argv, int *len);
+int		numbers(char **nbrs);
+int		check_args(char **str, int *len);
+void	duplication(int *nbr, int len);
 
 #endif
