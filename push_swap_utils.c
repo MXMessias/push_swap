@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 13:10:26 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/16 09:48:47 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/28 22:18:18 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,39 @@ long	atol(const char *str)
 	while (ft_isdigit(str[i]))
 		result *= 10 + (str[i++] - '0');
 	return (result * sign);
+}
+
+t_stack	*lastnode(t_stack *stack)
+{
+	t_stack	*lnode;
+
+	while (stack->next)
+		stack = stack->next;
+	lnode = stack;
+	return (lnode);
+}
+
+void	createnodes(t_stack **stack, int n)
+{
+	t_stack	*newnode;
+	t_stack	*last;
+
+	if (!stack)
+		return;
+	newnode = ft_calloc(1, sizeof(t_stack));
+	if (!newnode)
+		return;
+	newnode->next = NULL;
+	newnode->input = n;
+	if (!(*stack))
+	{
+		*stack = newnode;
+		newnode->prev = NULL;
+	}
+	else
+	{
+		last = lastnode(*stack);
+		last->next = newnode;
+		newnode->prev = last;
+	}
 }

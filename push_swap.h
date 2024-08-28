@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/16 11:31:16 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/08/28 22:23:13 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,13 @@ void	checker(int argc, char **argv, int *len);
 int		numbers(char **nbrs);
 int		check_args(char **str, int *len);
 void	duplication(int *nbr, int len);
+
+int		*conv_nbrs(char **str, int *nbr);
+
+t_stack	*lastnode(t_stack *stack);
+
+void	createnodes(t_stack **stack, int n);
+
+void	start_sta(t_stack **stack, int *input, int len);
 
 #endif
