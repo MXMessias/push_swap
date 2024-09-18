@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:45:01 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/28 22:28:18 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:07:57 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ int	main(int argc, char **argv)
 	input = conv_nbrs(argv, input);
 	duplication(input, len);
 	start_sta(&sa, input, len);
-	if (!)
+	if (!cresc_order(sa))
 	{
-		/* code */
+		if (check_stk_len(sa) == 2)
+			
 	}
 	
 }

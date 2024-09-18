@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/28 22:23:13 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:37:55 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,13 @@ void	createnodes(t_stack **stack, int n);
 
 void	start_sta(t_stack **stack, int *input, int len);
 
+bool	cresc_order(t_stack *stack);
+
+int	check_stk_len(t_stack *stack);
+
+void	check_op(t_stack **stackA, t_stack **stackB, t_moves op);
+
+void	swap(t_stack **stack, char *str);
+
+void	rotate(t_stack **stack, char *str);
 #endif

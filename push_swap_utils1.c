@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/28 22:22:51 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:05:38 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,17 @@ void	start_sta(t_stack **stack, int *input, int len)
 		createnodes(stack, input[i]);
 		i++;
 	}
+}
+
+int	check_stk_len(t_stack *stack)
+{
+	int	len;
+
+	len = 0;
+	while (stack)
+	{
+		len++;
+		stack = stack->next;
+	}
+	return (len);
 }
