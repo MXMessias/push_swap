@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:24:35 by mmessias          #+#    #+#             */
-/*   Updated: 2024/09/18 16:21:34 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:18:38 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,47 @@ void	rotate(t_stack **stack, char *str)
 	(*stack) = sec;
 	last->next = aux;
 	aux->next = NULL;
+	if (str)
+		ft_putendl_fd(str, 1);
+}
+
+void	reverse_rotate(t_stack **stack, char *str)
+{
+	t_stack	*aux;
+	t_stack	*last;
+	int		size;
+	int		i;
+
+	i = 0;
+	last = lastnode(*stack);
+	aux = *stack;
+	/*sift_atack(*stack);*/
+	size = check_stk_len(*stack);
+	while (i < size -1)
+	{
+		if (i == size - 2)
+			aux->next = NULL;
+		aux = aux->next;
+		i++;
+	}
+	last->next = *stack;
+	*stack = last;
+	if (str)
+		ft_putendl_fd(str, 1);
+}
+
+void	push(t_stack **src, t_stack **dest, char *str)
+{
+	t_stack	*aux;
+
+	aux = *src;
+	if (check_stk_len(*src) == 0)
+		return ;
+	/*sift_atack(*src);
+	sift_atck(*dest);*/
+	*src = (*src)->next;
+	aux->next = *dest;
+	*dest = aux;
 	if (str)
 		ft_putendl_fd(str, 1);
 }
