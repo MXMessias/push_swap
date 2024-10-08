@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/03 15:19:09 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:35:31 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,8 @@ void	swap(t_stack **stack, char *str);
 void	rotate(t_stack **stack, char *str);
 void	reverse_rotate(t_stack **stack, char *str);
 void	push(t_stack **src, t_stack **dest, char *str);
+
+void	three_elements(t_stack **stack);
+t_stack	*finder_big(t_stack *stack);
 
 #endif

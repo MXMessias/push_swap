@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 22:29:47 by mmessias          #+#    #+#             */
-/*   Updated: 2024/09/06 15:53:47 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:36:21 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,11 @@ bool	cresc_order(t_stack *stack)
 		stack = stack->next;
 	}
 	return (true);
+}
+
+void	three_elements(t_stack **stack)
+{
+	t_stack	*biggest;
+
+	biggest = finder_big(*stack);
 }

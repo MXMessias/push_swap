@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/09/09 18:05:38 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:57:34 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,22 @@ int	check_stk_len(t_stack *stack)
 		stack = stack->next;
 	}
 	return (len);
+}
+
+t_stack	*finder_big(t_stack *stack)
+{
+	int	bigger;
+	t_stack	*big_node;
+
+	bigger = stack->input;
+	while (stack)
+	{
+		if (stack->input >= bigger)
+		{
+			big_node = stack;
+			bigger = stack->input;
+		}
+	stack = stack->next;
+	}
+	return (big_node);
 }
