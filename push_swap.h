@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/10 16:46:57 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:14:16 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,9 @@ void	rotate(t_stack **stack, char *str);
 void	reverse_rotate(t_stack **stack, char *str);
 void	push(t_stack **src, t_stack **dest, char *str);
 
+void	rrr(t_stack **sa, t_stack **sb, char *str);
+void	rr (t_stack **sa, t_stack **sb, char *str);
+
 void	three_elements(t_stack **stack);
 t_stack	*finder_big(t_stack *stack);
 void	general_case(t_stack **sa, t_stack **sb);
@@ -83,5 +86,6 @@ void	prep_for_mov(t_stack *sa, t_stack *sb);
 void	check_median_index(t_stack *stack);
 void	target_sb(t_stack *sa, t_stack *sb);
 void	cost_sa_sb(t_stack *sa, t_stack *sb);
+void	cheap_node(t_stack *stack);
 
 #endif

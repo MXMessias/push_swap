@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 22:29:47 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/09 15:57:31 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:07:40 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	general_case(t_stack **sa, t_stack **sb)
 		check_op(sa, sb, PB);
 	while (size-- > 3 && !cresc_order(*sa))
 	{
+		prep_for_mov(*sa, *sb);
 		
 	}
 	

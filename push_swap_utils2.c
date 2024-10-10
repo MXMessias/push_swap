@@ -6,23 +6,23 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:01:16 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/10 16:47:41 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:03:00 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	prep_for_mov(t_stack *sa, t_stack *sb)
- {
+{
 	check_median_index(sa);
 	check_median_index(sb);
 	target_sb(sa, sb);
 	cost_sa_sb(sa, sb);
-	
- }
+	cheapest(sa);
+}
 
 void	check_median_index(t_stack *stack)
- {
+{
 	int i;
 	int	median;
 
@@ -90,3 +90,22 @@ void	cost_sa_sb(t_stack *sa, t_stack *sb)
 	}
 }
 
+void	cheapest(t_stack *stack)
+{
+	long	cheap;
+	t_stack	*node_cheap;
+
+	if (!stack)
+		return ;
+	cheap = LONG_MAX;
+	while (stack)
+	{
+		if (stack->cost < cheap)
+		{
+			cheap = stack->cost;
+			node_cheap = stack;
+		}
+		stack = stack->next;
+	}
+	node_cheap->cheapest = true;
+}
