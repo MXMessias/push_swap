@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/09 20:35:28 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:46:57 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ void	general_case(t_stack **sa, t_stack **sb);
 void	prep_for_mov(t_stack *sa, t_stack *sb);
 void	check_median_index(t_stack *stack);
 void	target_sb(t_stack *sa, t_stack *sb);
+void	cost_sa_sb(t_stack *sa, t_stack *sb);
 
 #endif
