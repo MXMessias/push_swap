@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/08 16:35:31 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:35:28 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <stdbool.h>
 # include <stddef.h>
+#include <limits.h>
 
 typedef enum moves
 {
@@ -39,7 +40,7 @@ typedef struct s_stack
 	int				input;
 	int				index;
 	int				cost;
-	bool			up_median;
+	bool			above_median;
 	bool			cheapest;
 	struct s_stack	*target_node;
 	struct s_stack	*next;
@@ -77,5 +78,9 @@ void	push(t_stack **src, t_stack **dest, char *str);
 
 void	three_elements(t_stack **stack);
 t_stack	*finder_big(t_stack *stack);
+void	general_case(t_stack **sa, t_stack **sb);
+void	prep_for_mov(t_stack *sa, t_stack *sb);
+void	check_median_index(t_stack *stack);
+void	target_sb(t_stack *sa, t_stack *sb);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 22:29:47 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/08 16:36:21 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:57:31 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,24 @@ void	three_elements(t_stack **stack)
 	t_stack	*biggest;
 
 	biggest = finder_big(*stack);
+	if (biggest == *stack)
+		check_op(stack, NULL, RA);
+	else if ((*stack)->next == biggest)
+		check_op(stack, NULL, RRA);
+	if ((*stack)->input > (*stack)->next->input)
+		check_op(stack, NULL, SA);
+}
+
+void	general_case(t_stack **sa, t_stack **sb)
+{
+	int	size;
+
+	size = check_stk_len(*sa);
+	if (size-- > 3 && !cresc_order(*sa))
+		check_op(sa, sb, PB);
+	while (size-- > 3 && !cresc_order(*sa))
+	{
+		
+	}
+	
 }

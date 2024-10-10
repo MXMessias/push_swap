@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:45:01 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/07 20:22:06 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:52:07 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	main(int argc, char **argv)
 		if (check_stk_len(sa) == 2)
 			check_op(&sa, &sa, SA);
 		else if (check_stk_len(sa) == 3)
-			
+			three_elements(&sa);
 		else
-			eafaeda
+			
 	}
 	
 	
