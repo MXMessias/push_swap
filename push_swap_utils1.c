@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/09 16:04:04 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/11 21:12:36 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,15 @@ t_stack	*finder_big(t_stack *stack)
 	stack = stack->next;
 	}
 	return (big_node);
+}
+
+t_stack *find_cheapest(t_stack *stack)
+{
+	while (stack)
+	{
+		if (stack->cheapest)
+			returnb (stack);
+		stack = stack->next;
+	}
+	return (stack);
 }

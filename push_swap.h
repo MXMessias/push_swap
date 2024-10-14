@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/10 21:14:16 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/14 17:52:32 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,10 @@ void	check_op(t_stack **stackA, t_stack **stackB, t_moves op);
 void	swap(t_stack **stack, char *str);
 void	rotate(t_stack **stack, char *str);
 void	reverse_rotate(t_stack **stack, char *str);
-void	push(t_stack **src, t_stack **dest, char *str);
+void	rotate_two(t_stack **sa, t_stack **sb, t_stack *cheap);
 
+void	push(t_stack **src, t_stack **dest, char *str);
+void	rev_rotate_two(t_stack **sa, t_stack **sb, t_stack *cheap);
 void	rrr(t_stack **sa, t_stack **sb, char *str);
 void	rr (t_stack **sa, t_stack **sb, char *str);
 
@@ -87,5 +89,10 @@ void	check_median_index(t_stack *stack);
 void	target_sb(t_stack *sa, t_stack *sb);
 void	cost_sa_sb(t_stack *sa, t_stack *sb);
 void	cheap_node(t_stack *stack);
+t_stack *find_cheapest(t_stack *stack);
+
+void	org_node_stack(t_stack **stack, t_stack *node, char stack_id);
+
+
 
 #endif
