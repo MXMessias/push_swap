@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:50:49 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/14 16:35:33 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:13:23 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ void	move_cheap_to_sb(t_stack **sa, t_stack **sb)
 	else if (!(cheapest->above_median)
 		&& !(cheapest->target_node->above_median))
 		rev_rotate_two(sa, sb, cheapest);
-	
+	org_node_stack(sa, cheapest, 'a');
+	org_node_stack(sb, cheapest->target_node, 'b');
+	check_op(sa, sb, PB);
 }
