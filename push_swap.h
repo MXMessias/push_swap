@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/16 20:42:57 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/17 20:34:00 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ void	move_cheap_to_sb(t_stack **sa, t_stack **sb);
 void	org_sa_sb(t_stack *sa, t_stack*sb);
 void	find_node_to_sa(t_stack *sa, t_stack *sb);
 t_stack	*find_min_node(t_stack *sa);
+void	back_to_sa(t_stack **sa, t_stack **sb);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 22:29:47 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/16 16:16:32 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/17 20:35:40 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	general_case(t_stack **sa, t_stack **sb)
 	three_elements(sa);
 	while (*sb)
 	{
-		
-	
-}
-
+		org_sa_sb(*sa, *sb);
+		back_to_sa(sa, sb);
+	}
+	check_median_index(*sa)
