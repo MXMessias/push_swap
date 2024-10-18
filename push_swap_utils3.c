@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:37:00 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/16 20:47:49 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:13:47 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,25 @@ t_stack	*find_min_node(t_stack *sa)
 		sa = sa->next;
 	}
 	return (minimum);
+}
+
+void	ft_free(t_stack *sa, t_stack *sb, int *input)
+{
+	t_stack	*i;
+
+	i = sa;
+	while (i)
+	{
+		i = sa->next;
+		free(sa);
+		sa = i;
+	}
+	i = sb;
+	while (i)
+	{
+		i = sb->next;
+		free(sb);
+		sb = i;
+	}
+	free(input);
 }

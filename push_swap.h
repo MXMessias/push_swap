@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/17 20:34:00 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:09:01 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,37 +50,26 @@ typedef struct s_stack
 int		valider_char(char c);
 int		valider_nbr(char *str, int *j);
 long	atol(const char *str);
-
 void	printerror(void);
 void	checker(int argc, char **argv, int *len);
 int		numbers(char **nbrs);
 int		check_args(char **str, int *len);
 void	duplication(int *nbr, int len);
-
 int		*conv_nbrs(char **str, int *nbr);
-
 t_stack	*lastnode(t_stack *stack);
-
 void	createnodes(t_stack **stack, int n);
-
 void	start_sta(t_stack **stack, int *input, int len);
-
 bool	cresc_order(t_stack *stack);
-
 int		check_stk_len(t_stack *stack);
-
 void	check_op(t_stack **stackA, t_stack **stackB, t_moves op);
-
 void	swap(t_stack **stack, char *str);
 void	rotate(t_stack **stack, char *str);
 void	reverse_rotate(t_stack **stack, char *str);
 void	rotate_two(t_stack **sa, t_stack **sb, t_stack *cheap);
-
 void	push(t_stack **src, t_stack **dest, char *str);
 void	rev_rotate_two(t_stack **sa, t_stack **sb, t_stack *cheap);
 void	rrr(t_stack **sa, t_stack **sb, char *str);
 void	rr (t_stack **sa, t_stack **sb, char *str);
-
 void	three_elements(t_stack **stack);
 t_stack	*finder_big(t_stack *stack);
 void	general_case(t_stack **sa, t_stack **sb);
@@ -90,12 +79,13 @@ void	target_sb(t_stack *sa, t_stack *sb);
 void	cost_sa_sb(t_stack *sa, t_stack *sb);
 void	cheap_node(t_stack *stack);
 t_stack *find_cheapest(t_stack *stack);
-
 void	org_node_stack(t_stack **stack, t_stack *node, char stack_id);
 void	move_cheap_to_sb(t_stack **sa, t_stack **sb);
 void	org_sa_sb(t_stack *sa, t_stack*sb);
 void	find_node_to_sa(t_stack *sa, t_stack *sb);
 t_stack	*find_min_node(t_stack *sa);
 void	back_to_sa(t_stack **sa, t_stack **sb);
+void	first_min(t_stack **sa);
+void	ft_free(t_stack *sa, t_stack *sb, int *input);
 
 #endif

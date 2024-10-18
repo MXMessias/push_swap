@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:50:49 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/17 20:32:55 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 15:32:15 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,15 @@ void	back_to_sa(t_stack **sa, t_stack **sb)
 {
 	org_node_stack(sa, (*sb)->target_node, 'a');
 	check_op(sb, sa, PA);
+}
+
+void	first_min(t_stack **sa)
+{
+	while ((*sa)->input != find_min_node(*sa)->input)
+	{
+		if (find_min_node(*sa)->above_median)
+			check_op(sa, NULL, RA);
+		else
+			check_op(sa, NULL, RRA);
+	}
 }

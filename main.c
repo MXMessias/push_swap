@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:45:01 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/09 14:52:07 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:14:58 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	main(int argc, char **argv)
 		else if (check_stk_len(sa) == 3)
 			three_elements(&sa);
 		else
-			
+			general_case(&sa, &sb);
 	}
-	
-	
+	ft_free(sa, sb, input);
+	return (0);
 }
