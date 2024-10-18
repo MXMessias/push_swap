@@ -6,11 +6,11 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 13:17:08 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/16 10:00:58 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 20:27:03 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+# include "push_swap.h"
 
 void	printerror(void)
 {

@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/11 21:12:36 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 20:32:17 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	*conv_nbrs(char **str, int *nbr)
 				j++;
 			if (str[i][j])
 				nbr[p++] = ft_atoi(&str[i][j]);
-			while (ft_isdigit(str[i][j]) || str[i][j] == '+' 
-					|| str[i][j] == '-')
+			while (ft_isdigit(str[i][j]) || str[i][j] == '+'
+				|| str[i][j] == '-')
 					j++;
 		}
 		i++;
@@ -42,7 +42,7 @@ int	*conv_nbrs(char **str, int *nbr)
 
 void	start_sta(t_stack **stack, int *input, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < len)
@@ -67,7 +67,7 @@ int	check_stk_len(t_stack *stack)
 
 t_stack	*finder_big(t_stack *stack)
 {
-	int	bigger;
+	int		bigger;
 	t_stack	*big_node;
 
 	bigger = stack->input;
@@ -83,7 +83,7 @@ t_stack	*finder_big(t_stack *stack)
 	return (big_node);
 }
 
-t_stack *find_cheapest(t_stack *stack)
+t_stack	*find_cheapest(t_stack *stack)
 {
 	while (stack)
 	{

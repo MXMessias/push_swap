@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 13:10:26 by mmessias          #+#    #+#             */
-/*   Updated: 2024/08/28 22:18:18 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/18 20:25:55 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ void	createnodes(t_stack **stack, int n)
 	t_stack	*last;
 
 	if (!stack)
-		return;
+		return ;
 	newnode = ft_calloc(1, sizeof(t_stack));
 	if (!newnode)
-		return;
+		return ;
 	newnode->next = NULL;
 	newnode->input = n;
 	if (!(*stack))
