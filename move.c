@@ -6,16 +6,16 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:50:49 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/18 15:32:15 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:09:07 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	move_cheap_to_sb(t_stack **sa, t_stack **sb)
 {
 	t_stack	*cheapest;
-	
+
 	cheapest = find_cheapest(*sa);
 	if (cheapest->above_median
 		&& cheapest->target_node->above_median)

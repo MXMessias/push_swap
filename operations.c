@@ -6,11 +6,11 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:24:35 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/03 15:18:38 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:14:38 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	check_op(t_stack **stackA, t_stack **stackB, t_moves op)
 {
@@ -57,7 +57,6 @@ void	rotate(t_stack **stack, char *str)
 	aux = *stack;
 	last = lastnode(*stack);
 	sec = (*stack)->next;
-	/*sift_stack(*stack);*/
 	(*stack) = sec;
 	last->next = aux;
 	aux->next = NULL;
@@ -75,7 +74,6 @@ void	reverse_rotate(t_stack **stack, char *str)
 	i = 0;
 	last = lastnode(*stack);
 	aux = *stack;
-	/*sift_atack(*stack);*/
 	size = check_stk_len(*stack);
 	while (i < size -1)
 	{
@@ -97,8 +95,6 @@ void	push(t_stack **src, t_stack **dest, char *str)
 	aux = *src;
 	if (check_stk_len(*src) == 0)
 		return ;
-	/*sift_atack(*src);
-	sift_atck(*dest);*/
 	*src = (*src)->next;
 	aux->next = *dest;
 	*dest = aux;

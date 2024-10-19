@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:29:11 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/14 16:32:51 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:15:04 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	rrr(t_stack **sa, t_stack **sb, char *str)
 	ft_putendl_fd(str, 1);
 }
 
-void	rr (t_stack **sa, t_stack **sb, char *str)
+void	rr(t_stack **sa, t_stack **sb, char *str)
 {
 	str = NULL;
 	rotate(sa, str);
@@ -45,4 +45,3 @@ void	rev_rotate_two(t_stack **sa, t_stack **sb, t_stack *cheap)
 	check_median_index(*sa);
 	check_median_index(*sb);
 }
-

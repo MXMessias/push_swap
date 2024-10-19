@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:01:16 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/10 21:03:00 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:20:42 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	prep_for_mov(t_stack *sa, t_stack *sb)
 
 void	check_median_index(t_stack *stack)
 {
-	int i;
+	int	i;
 	int	median;
 
 	i = 0;
@@ -35,40 +35,40 @@ void	check_median_index(t_stack *stack)
 		stack->index = i;
 		if (i <= median)
 			stack->above_median = true;
-		else 
+		else
 			stack->above_median = false;
 		stack = stack->next;
 		i++;
 	}
- }
- 
+}
+
 void	target_sb(t_stack *sa, t_stack *sb)
- {
+{
 	t_stack	*read_b;
 	t_stack	*target;
-	long	BbLa;
+	long	aux;
 
 	while (sa)
 	{
-		BbLa = LONG_MIN;
+		aux = LONG_MIN;
 		read_b = sb;
 		while (read_b)
 		{
 			if (read_b->input < sa->input
-					&& read_b->input > BbLa)
-					{
-						BbLa = read_b->input;
-						target = read_b;
-					}
-				read_b = read_b->next;
+				&& read_b->input > aux)
+			{
+				aux = read_b->input;
+				target = read_b;
+			}
+			read_b = read_b->next;
 		}
-		if (BbLa == LONG_MIN)
+		if (aux == LONG_MIN)
 			sa->target_node = finder_big(sb);
 		else
 			sa->target_node = target;
 		sa = sa->next;
 	}
- }
+}
 
 void	cost_sa_sb(t_stack *sa, t_stack *sb)
 {

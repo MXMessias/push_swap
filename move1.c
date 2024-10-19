@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:35:46 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/17 16:42:49 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 15:59:09 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	org_node_stack(t_stack **stack, t_stack *node, char stack_id)
 	while (*stack)
 	{
 		if (stack_id == 'a')
-			{
-				if (node->above_median)
-					check_op(stack, NULL, RA);
-				else
-					check_op(stack, NULL, RRA);
-			}
+		{
+			if (node->above_median)
+				check_op(stack, NULL, RA);
+			else
+				check_op(stack, NULL, RRA);
+		}
 		else if (stack_id == 'b')
 		{
 			if (node->above_median)
@@ -54,11 +54,11 @@ void	find_node_to_sa(t_stack *sa, t_stack *sb)
 		{
 			if (sa_index->input > sb->input
 				&& sa_index->input < good_place)
-				{
-					good_place = sa_index->input;
-					target_n = sa_index;
-				}
-				sa_index =sa_index->next;
+			{
+				good_place = sa_index->input;
+				target_n = sa_index;
+			}
+			sa_index = sa_index->next;
 		}
 		if (good_place == LONG_MAX)
 			sb->target_node = find_min_node(sa);
@@ -67,4 +67,3 @@ void	find_node_to_sa(t_stack *sa, t_stack *sb)
 		sb = sb->next;
 	}
 }
-

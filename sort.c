@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 22:29:47 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/18 15:33:18 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:21:03 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 bool	cresc_order(t_stack *stack)
 {
-	if(!stack)
+	if (!stack)
 		return (true);
 	while (stack->next)
 	{

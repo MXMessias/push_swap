@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/18 20:32:17 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:22:11 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	*conv_nbrs(char **str, int *nbr)
 				nbr[p++] = ft_atoi(&str[i][j]);
 			while (ft_isdigit(str[i][j]) || str[i][j] == '+'
 				|| str[i][j] == '-')
-					j++;
+				j++;
 		}
 		i++;
 	}
@@ -78,7 +78,7 @@ t_stack	*finder_big(t_stack *stack)
 			big_node = stack;
 			bigger = stack->input;
 		}
-	stack = stack->next;
+		stack = stack->next;
 	}
 	return (big_node);
 }
