@@ -6,12 +6,12 @@
 #    By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/30 13:17:22 by mmessias          #+#    #+#              #
-#    Updated: 2024/10/22 15:08:07 by mmessias         ###   ########.fr        #
+#    Updated: 2024/10/22 15:34:20 by mmessias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= push_swap
-CC= cc -Wall -Werror -Wextra
+CC= cc -g -Wall -Werror -Wextra
 SRC= *.c
 OBJS= $(SRC:.c=.o)
 LIBFT= Libft/libft.a

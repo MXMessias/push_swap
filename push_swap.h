@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:11:29 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/18 20:25:00 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:30:43 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ t_stack	*find_min_node(t_stack *sa);
 void	back_to_sa(t_stack **sa, t_stack **sb);
 void	first_min(t_stack **sa);
 void	ft_free(t_stack *sa, t_stack *sb, int *input);
+void	cheapest(t_stack *stack);
 
 #endif

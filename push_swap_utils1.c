@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:28:37 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/19 16:22:11 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:27:27 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ t_stack	*find_cheapest(t_stack *stack)
 	while (stack)
 	{
 		if (stack->cheapest)
-			returnb (stack);
+			return (stack);
 		stack = stack->next;
 	}
 	return (stack);

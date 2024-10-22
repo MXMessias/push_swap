@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 13:17:08 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/19 16:09:48 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:15:04 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	checker(int argc, char **argv, int *len)
 		return ;
 	if (!numbers(argv))
 		printerror();
-	if (!arguments(argv, len))
+	if (!check_args(argv, len))
 		printerror();
 }
 
