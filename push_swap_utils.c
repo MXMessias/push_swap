@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 13:10:26 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/18 20:25:55 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/25 12:43:11 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ long	atol(const char *str)
 		i++;
 	}
 	while (ft_isdigit(str[i]))
-		result *= 10 + (str[i++] - '0');
+		result = result * 10 + (str[i++] - '0');
 	return (result * sign);
 }
 
