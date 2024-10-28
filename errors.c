@@ -6,7 +6,7 @@
 /*   By: mmessias <mmessias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 13:17:08 by mmessias          #+#    #+#             */
-/*   Updated: 2024/10/22 20:17:26 by mmessias         ###   ########.fr       */
+/*   Updated: 2024/10/28 22:23:24 by mmessias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	numbers(char **nbrs)
 		while (nbrs[i][j])
 		{
 			if ((nbrs[i][j] == '+' || nbrs[i][j] == '-')
-				&& (!ft_isdigit(nbrs[i][j + 1])))
+				&& !(ft_isdigit(nbrs[i][j + 1])))
 				return (0);
 			if (!valider_char(nbrs[i][j]))
 				return (0);
